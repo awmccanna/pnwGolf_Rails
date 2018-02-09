@@ -1,0 +1,33 @@
+<h1>New Course</h1>
+
+<%= form_with scope: :course, url: courses_path, local: true do |form| %>
+  <div id="course_name">
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <br>
+  <div id="address">
+    <%= form.label :address %><br>
+    <%= form.text_field :address, :id => 'addressText' %>
+  </div>
+  <div id="wrapper">
+    <div id="city">
+      <%= form.label :city %><br>
+      <%= form.text_field :city, :id => 'cityText'%>
+    </div>
+    <div id="state">
+      <%= form.label :state %><br>
+      <%= form.text_field :state, :id => 'stateText'%>
+    </div>
+    <div id="zip">
+      <%= form.label :zip %><br>
+      <%= form.text_field :zip, :id => 'zipText'%>
+    </div>
+  </div>
+
+  <p>
+    <%=form.submit %>
+  </p>
+
+
+<% end %>

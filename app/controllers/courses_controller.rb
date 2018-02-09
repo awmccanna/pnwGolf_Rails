@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   end
 
   def create
+    render plain: params[:course].inspect
   end
 
   def edit
