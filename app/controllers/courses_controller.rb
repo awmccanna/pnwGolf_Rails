@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
 
-  def list
+  def index
+    @courses = Course.all
   end
 
   def show
@@ -8,10 +9,16 @@ class CoursesController < ApplicationController
   end
 
   def new
+    @course = Course.new
   end
 
   def create
     @course = Course.new(course_params)
+    if @course.save
+      redirect_to @course
+    else
+      render 'new'
+    end
   end
 
   def edit
@@ -28,9 +35,6 @@ class CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(:name, :address, :city, :state, :zip)
   end
-
-
-
 
 
 end

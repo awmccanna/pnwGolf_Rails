@@ -1,10 +1,9 @@
-<p>
-  <strong>Course: </strong><br>
-  <%= @course.course_name %>
-</p>
+<h1 id="course_name"><%= @course.name %></h1>
 
 <p>
-  <strong>Address: </strong><br>
-  <%= @course.address%><br>
-  <%= @course.city%>, <%= @course.state%> <%= @course.zip %>
+  <b>Address:</b><br>
+  <%= @course.address %><br>
+  <%= @course.city %>, <%= @course.state %> <%= @course.zip %>
 </p>
+
+<%= link_to 'Back', courses_path %>
