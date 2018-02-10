@@ -1,0 +1,49 @@
+<h1>Edit Course Information</h1>
+
+<%= form_with(model: @course) do |form| %>
+
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@course.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @course.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="name">
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+  <br>
+  <div id="address">
+    <%= form.label :address %><br>
+    <%= form.text_field :address, :id => 'addressText' %>
+  </div>
+  <div id="wrapper">
+    <div id="city">
+      <%= form.label :city %><br>
+      <%= form.text_field :city, :id => 'cityText'%>
+    </div>
+    <div id="state">
+      <%= form.label :state %><br>
+      <%= form.text_field :state, :id => 'stateText'%>
+    </div>
+    <div id="zip">
+      <%= form.label :zip %><br>
+      <%= form.text_field :zip, :id => 'zipText'%>
+    </div>
+  </div>
+
+  <p>
+    <%=form.submit %>
+  </p>
+
+
+
+<% end %>
