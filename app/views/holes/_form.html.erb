@@ -1,0 +1,23 @@
+<%= form_with(model: [ @course, @course.holes.build ], local: true) do |form| %>
+  <div>
+    <table>
+      <tr>
+        <td><%= form.label :holeNum, 'Hole Number' %></td>
+        <td><%= form.label :blueYardage, 'Blue Yardage' %></td>
+        <td><%= form.label :whiteYardage, 'White Yardage' %></td>
+        <td><%= form.label :redYardage, 'Red Yardage' %></td>
+        <td><%= form.label :par %></td>
+      </tr>
+      <tr>
+        <td><%= form.text_field :holeNum %></td>
+        <td><%= form.text_field :blueYardage %></td>
+        <td><%= form.text_field :whiteYardage %></td>
+        <td><%= form.text_field :redYardage %></td>
+        <td><%= form.text_field :par %></td>
+      </tr>
+    </table>
+  </div>
+  <p>
+    <%= form.submit :value => 'Add hole' %>
+  </p>
+<% end %>

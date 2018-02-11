@@ -1,9 +1,35 @@
 <h1 id="course_name"><%= @course.name %></h1>
 
-<p>
+<div>
   <b>Address:</b><br>
   <%= @course.address %><br>
   <%= @course.city %>, <%= @course.state %> <%= @course.zip %>
-</p>
+</div>
 
+<h2>Holes</h2>
+
+<table  id="course_holes_table">
+  <tr id="course_header">
+    <th>Hole Number</th>
+    <th>Blue Yardage</th>
+    <th>White Yardage</th>
+    <th>Red Yardage</th>
+    <th>Par</th>
+  </tr>
+  <%= render @course.holes %>
+</table>
+
+
+
+
+
+
+<h2>Add a hole</h2>
+<%= render 'holes/form' %>
+
+
+
+
+<br>
+<%= link_to 'Edit', edit_course_path(@course) %>
 <%= link_to 'Back', courses_path %>

@@ -1,0 +1,9 @@
+<tr id="course_body">
+  <th><%= hole.holeNum %></th>
+  <th><%= hole.blueYardage %></th>
+  <th><%= hole.whiteYardage %></th>
+  <th><%= hole.redYardage %></th>
+  <th><%= hole.par %></th>
+  <th><%= link_to 'Destroy Hole', [hole.course, hole], method: :delete,
+                              data: { confirm: 'Are you sure?'} %></th>
+</tr>

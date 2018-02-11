@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  holeNum: 1
+  blueYardage: 1
+  whiteYardage: 1
+  redYardage: 1
+  par: 1
+  course: one
+
+two:
+  holeNum: 1
+  blueYardage: 1
+  whiteYardage: 1
+  redYardage: 1
+  par: 1
+  course: two
